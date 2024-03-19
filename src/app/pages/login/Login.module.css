@@ -1,0 +1,56 @@
+
+.containerLogin{
+    padding: 5% 40% 10% 38%;
+}
+.conteudoLogin{
+    display: flex;
+    flex-direction: column;
+}
+.cardLogin{
+    width: 300px;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.4);
+}
+
+.bottomContainer{
+    background: var(--color-gradient);
+    color: lawngreen;
+    box-shadow: 10px 5px 5px rgba(10, 40, 30, 0.4);
+    border-radius: 15px;
+    cursor: pointer;
+}
+.componentGradient{
+    min-width: 200px;
+    width: auto;
+    min-height: 50px;
+    height: auto;
+    border-radius: 10px;
+    background-image: -webkit-linear-gradient(top, #c2c8cb, #727578);
+    background-image: -moz-linear-gradient(top, #c2c8cb, #727578);
+    background-image: -ms-linear-gradient(top,#c2c8cb, #727578);
+    background-image: -o-linear-gradient(top,#c2c8cb, #727578);
+    background-image: linear-gradient(to bottom, #c2c8cb, #727578);
+    box-shadow:  20px 20px 60px #281340,-20px -20px 60px #3d5257;
+}
+.bottomAlert{
+    background: var(--color-gradient);
+    color: #fcef00;
+    box-shadow: 10px 5px 5px rgba(28, 236, 32, 0.4);
+    border-radius: 15px;
+}
+.inputLogin {
+    padding-inline-start: 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    border-bottom-left-radius: 15px;
+    min-height: 25px;
+    height: auto;
+    max-width: 300px;
+    width: auto;
+    color: #021108;
+    background: rgba(0, 3, 10, 0.2);
+    box-shadow: 10px 5px 5px rgba(10, 40, 30, 0.4);
+}
+
+.cursorHome:hover{
+    cursor: pointer;
+}
