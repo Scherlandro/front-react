@@ -8,17 +8,6 @@
     border-style: groove ;
 }
 .cube {
-<<<<<<< HEAD
-   /* width: 200px;
-    height: 200px;*/
-    /* position: center; */
-    position: absolute;
-    transform-style: preserve-3d;
-    transition: transform 0.3s ease;
-    /*  animation: rotateCube 15s infinite linear;
-     background-color: grey;
-     border: 1px solid #000;*/
-=======
    width: 50vw;
     height: 10vh;
      position: relative;
@@ -53,17 +42,12 @@
     to{
         transform: rotateY(360deg);
     }
->>>>>>> e0f68eb (new add)
 }
 
 
 .logo{
     width: 90%;
     height: 90%;
-<<<<<<< HEAD
-   /* background: url("../image/r2_d2.png");*/
-=======
->>>>>>> e0f68eb (new add)
     background-position: center;
     background-size: cover;
     position: absolute;
@@ -86,35 +70,6 @@
     cursor: pointer;
 }
 
-<<<<<<< HEAD
-
-.front {
-    transform: translateZ(100px);
-}
-
-.back {
-    transform: rotateY(180deg) translateZ(100px);
-}
-
-.right {
-    transform: rotateY(90deg) translateZ(100px);
-}
-
-.left {
-    transform: rotateY(-90deg) translateZ(100px);
-}
-
-@keyframes rotar{
-    from{
-        transform: rotateY(0deg);
-    }
-    to{
-        transform: rotateY(360deg);
-    }
-}
-
-=======
->>>>>>> e0f68eb (new add)
 .bottom_part{
     width: 20rem;
     height: 20rem;
