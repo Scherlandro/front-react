@@ -43,7 +43,7 @@ export const Dashboard = () => {
                 for (let i = 0; i < data.length ; i++) {
                         setListCt(data);
                 }
-                console.log(listCt.map((i)=>i.nome));
+                console.log(listCt.map((i)=>i.nome), listCt.length);
             });
     }
 
