@@ -54,11 +54,7 @@ export const Home = () => {
             <h4>
                 <a target="_blank" href="https://www.youtube.com/@scherlandroaraujo8273">Scherlandro</a>
             </h4>
-      {/*      https://gist.github.com/rctorr/eef3de5bbcdf1b918ccf4390dbf54b09
-            https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms
-            https://blog.matheuscastiglioni.com.br/criando-animacoes-com-css3/#:~:text=Para%20girar%20uma%20elemento%20com,ir%C3%A1%20dar%20um%20giro%20completo.
-
-         */}   <div className={styles.container}>
+     <div className={styles.container}>
 
                 {data.slides.map((item, idx) => {
                     console.log('Lado -> ', item.f, rotateY, item.alt, idx* rotateY);
