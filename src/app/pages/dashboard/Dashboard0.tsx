@@ -8,51 +8,17 @@ import {
     Fab,
     FormControl,
     FormControlLabel,
-    Grid,
+    Grid, IconButton,
     Radio,
     RadioGroup,
     Slider,
     Tooltip,
     Typography
 } from '@mui/material';
-import {MenuMain} from "../Menu/Menu";
+import {MenuMain} from "../menu/Menu";
 
 
 const Dashboard0 = () => {
-    const {register, handleSubmit, setValue,setFocus} = useForm();
-
-    const onSubmit = (e:any)=>{ console.log(e)};
-
-    const checkCEP = (e:any) => {
-        const cep = e.target.value.replace(/\D/g, '');
-        console.log(cep);
-        fetch(`https://viacep.com.br/ws/${cep}/json/`)
-            .then(res => res.json()).then(
-        data => {  console.log(data);
-            setValue('address', data.logradouro);
-            setValue('neighborhood', data.bairro);
-            setValue('city', data.localidade);
-            setValue('uf', data.uf);
-            setFocus('addressNumber');
-
-        });
-    }
-
-    const checkAddress = (e:any) => {
-        const municipios = e.target.value.replace(/\D/g, '');
-       // console.log(municipios);
-        fetch(`https://servicodados.ibge.gov.br/api/v1/localidades/distritos?orderBy=${municipios}/json/`)
-            .then(res => res.json()).then(
-        data => {  console.log(data);
-            setValue('municipio', data.municipio);
-         /*   setValue('address', data.logradouro);
-            setValue('neighborhood', data.bairro);
-            setValue('city', data.localidade);
-            setValue('uf', data.uf);
-            setFocus('addressNumber');*/
-
-        });
-    }
 
     const [customization, setCustomization] = useState('');
     const theme = useTheme();
@@ -116,8 +82,7 @@ const Dashboard0 = () => {
     return (
         <> <MenuMain />
             {/* toggle button */}
-            <Tooltip title="Live Customize">
-
+            <Tooltip title="Scale exemple">
                 <Fab
                     component="div"
                     onClick={handleToggle}
@@ -136,11 +101,7 @@ const Dashboard0 = () => {
                         zIndex: theme.zIndex.speedDial
                     }}
                 >
-      {/*        <AnimateButton type="rotate">
-                        <IconButton color="inherit" size="large" disableRipple>
-                            <IconSettings />
-                        </IconButton>
-                    </AnimateButton>*/}
+                   Scale
                 </Fab>
             </Tooltip>
 
@@ -233,40 +194,7 @@ const Dashboard0 = () => {
                     </Grid>
                 </div>
 
-                <form onSubmit={handleSubmit(onSubmit)}>
-                    <Grid  sx={{ p: 6 }}>
-                    <label>
-                       {/* <input type="text" {...register("address")} onBlur={checkAddress} />*/}
-                        <button onClick={checkAddress}></button>
-                        <select {...register("municipio")}></select>
-                    </label>
-                    <label>
-                        CEP:
-                        <input type="text" {...register("cep")} onBlur={checkCEP} />
-                    </label>
-                    <label>
-                        Rua:
-                        <input type="text" {...register("address")} />
-                    </label>
-                    <label>
-                        Número:
-                        <input type="text" {...register("addressNumber")} />
-                    </label>
-                    <label>
-                        Bairro:
-                        <input type="text" {...register("neighborhood")}  />
-                    </label>
-                    <label>
-                        Cidade:
-                        <input type="text" {...register("city")}  />
-                    </label>
-                    <label>
-                        Estado:
-                        <input type="text" {...register("uf")}  />
-                    </label>
-                        <button type="submit" >Enviar</button>
-                    </Grid>
-                </form>
+
             </Drawer>
         </>
     );

@@ -1,12 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import {MenuMain} from "../Menu/Menu";
+import {MenuMain} from "../menu/Menu";
 import styles from "./Projects.module.css"
-import Swiper from "swiper";
-import {Cube3d} from "../../shared/components/Cube3d";
 import {Card, CardContent, Grid} from "@mui/material";
 
 import {ArrowCircleLeft, ArrowCircleRight, CardGiftcard, Grid3x3Outlined, GridView} from "@mui/icons-material";
-import logo from '../image/lambao.jpg';
 
 
 export const Projects = () => {

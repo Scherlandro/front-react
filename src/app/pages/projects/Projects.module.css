@@ -72,13 +72,10 @@
 .cube {
     width: 200px;
     height: 200px;
-   /* position: center; */
     position: absolute;
     transform-style: preserve-3d;
     transition: transform 0.3s ease;
-   /*  animation: rotateCube 15s infinite linear;
-    background-color: grey;
-    border: 1px solid #000;*/
+
 }
 
 .side {

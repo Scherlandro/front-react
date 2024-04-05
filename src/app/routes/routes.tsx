@@ -1,12 +1,12 @@
 import { BrowserRouter, Route, Routes as Switch, Navigate } from "react-router-dom";
 
 import Dashboard0 from "../pages/dashboard/Dashboard0";
-import {MenuMain} from "../pages/Menu/Menu";
+import {MenuMain} from "../pages/menu/Menu";
 import {Login} from "../pages/login/Login";
 import {Dashboard} from "../pages/dashboard/Dashboard";
-import {Offers} from "../pages/Offers/Offers";
+import {Offers} from "../pages/offers/Offers";
 import {Projects} from "../pages/projects/Projects";
-import {Home} from "../pages/Home/Home";
+import {Home} from "../pages/home/Home";
 
 export const Routes = () => {
   return (

@@ -1,5 +1,5 @@
-import {MenuMain} from "../Menu/Menu";
-import styles from "../Home/Home.module.css";
+import {MenuMain} from "../menu/Menu";
+import styles from ".//Home.module.css";
 import React, {useEffect, useState} from "react";
 import {ArrowCircleLeft, ArrowCircleRight} from "@mui/icons-material";
 
@@ -54,6 +54,7 @@ export const Home = () => {
             <h4>
                 <a target="_blank" href="https://www.youtube.com/@scherlandroaraujo8273">Scherlandro</a>
             </h4>
+
             <div className={styles.container}>
 
                 {data.slides.map((item, idx) => {
@@ -65,8 +66,7 @@ export const Home = () => {
                             <img
                                 src={rotateY < 181 ? item.src : item.srci
                                     ? rotateY > 360 ? setRotateY(0) : item.srci : ''}
-                                /*src={item.src}*/
-                                alt={item.alt}
+                               alt={item.alt}
                                 key={idx}
                                 className={item.f}
                                 style={{borderRadius: 5}}

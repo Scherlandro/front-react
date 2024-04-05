@@ -3,7 +3,7 @@ import { useForm, SubmitHandler } from "react-hook-form"
 
 import {ButtonLogin} from "../../shared/components/ButtonLogin";
 import {InputLogin} from "../../shared/components/InputLogin";
-import {MenuMain} from "../Menu/Menu";
+import {MenuMain} from "../menu/Menu";
 import styles from "./Login.module.css";
 import {useUsuarioLogado} from "../../shared/hooks/UseUsuarioLogado";
 

@@ -1,4 +1,4 @@
-import {MenuMain} from "../../pages/Menu/Menu";
+import {MenuMain} from "../../pages/menu/Menu";
 import React from "react";
 
 interface IInputDashord {
