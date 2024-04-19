@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import {useForm} from "react-hook-form"
-import {IProduto} from "../../shared/interfaces/product";
 import {
     Card,
     Drawer,
@@ -112,6 +111,13 @@ export const Dashboard = () => {
         }
     }
 
+    useEffect(() => {
+        fetch("https://brasilapi.com.br/api/ibge/uf/v1")
+            .then((res) => res.json())
+            .then((data) =>{
+                if(data != null)
+                setEstados(data)});
+    }, []);
 
     const handleStatesUpdate = (event: any) => {
         setSelectedEstado(event.target.value);

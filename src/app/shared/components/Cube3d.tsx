@@ -22,18 +22,7 @@ import {Images} from "../../Images";
 
 export const Cube3d =() => {
 
-    const faces = {  0: styles.right
-        ,
-
-        1: styles.back
-        ,
-
-        2: styles.left
-        ,
-
-        3: styles.front
-
-    };
+    const faces = { 0: styles.right, 1: styles.back, 2: styles.left,3: styles.front };
     /*
         const data1 = {
             slides: [
@@ -130,12 +119,10 @@ export const Cube3d =() => {
                     console.log('FACE ->',item.f,'SRC->', item.src)
                     return (
                         <div className={styles.cube} style={{transform: `rotateY(${rotateY}deg)`}}>
-                            <img
+                           <img
                                 src={item.src}
                                 key={item.id}
-                               className={item.id === slide ?   faces[0]  : faces[1]
-                                    ? item.id === slide + 1 ? faces[2] : faces[3] : faces[1] }
-                             /*  className={item.f}*/
+                               className={item.f}
                                 style={{borderRadius: 5}}
                                 width={200} height={150}
                             />

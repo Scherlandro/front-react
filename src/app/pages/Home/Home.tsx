@@ -39,7 +39,7 @@ export const Home = () => {
     };
 
     const nextSlide = () => {
-        setRotateY(rotateY + 90);
+   setRotateY(rotateY + 90);
         setSlide(slide === data.slides.length - 1 ? 0 : slide + 1);
     };
     const prevSlide = () => {
@@ -54,19 +54,23 @@ export const Home = () => {
             <h4>
                 <a target="_blank" href="https://www.youtube.com/@scherlandroaraujo8273">Scherlandro</a>
             </h4>
+      {/*      https://gist.github.com/rctorr/eef3de5bbcdf1b918ccf4390dbf54b09
+            https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_transforms/Using_CSS_transforms
+            https://blog.matheuscastiglioni.com.br/criando-animacoes-com-css3/#:~:text=Para%20girar%20uma%20elemento%20com,ir%C3%A1%20dar%20um%20giro%20completo.
 
-            <div className={styles.container}>
+         */}   <div className={styles.container}>
 
                 {data.slides.map((item, idx) => {
-                    console.log('Lado -> ', item.f, rotateY, item.alt, idx * rotateY);
+                    console.log('Lado -> ', item.f, rotateY, item.alt, idx* rotateY);
                     return (
 
                         <div className={styles.cube} style={{transform: `rotateY(${rotateY}deg)`}}>
-                            <div className={styles.top}/>
+                            <div className={styles.top} />
                             <img
                                 src={rotateY < 181 ? item.src : item.srci
-                                    ? rotateY > 360 ? setRotateY(0) : item.srci : ''}
-                               alt={item.alt}
+                                    ? rotateY > 360 ? setRotateY(0) : item.srci : '' }
+                                /*src={item.src}*/
+                                alt={item.alt}
                                 key={idx}
                                 className={item.f}
                                 style={{borderRadius: 5}}
@@ -76,16 +80,16 @@ export const Home = () => {
                         </div>
                     );
                 })}
-                <div className={styles.arrows}>
-                    <ArrowCircleRight onClick={nextSlide} className={styles.arrow}/>
-                    <br/> <br/>
-                    <ArrowCircleLeft onClick={prevSlide} className={styles.arrow}/>
-                </div>
+            <div className={styles.arrows}>
+                <ArrowCircleRight onClick={nextSlide} className={styles.arrow}/>
+                    <br/>  <br/>
+                <ArrowCircleLeft onClick={prevSlide} className={styles.arrow}/>
+            </div>
             </div>
 
 
-            <div className={styles.logo}>
-                <img src={require("../image/xwing.png")}/>
+           <div className={styles.logo}>
+                    <img src={require("../image/xwing.png")}/>
             </div>
 
         </div>

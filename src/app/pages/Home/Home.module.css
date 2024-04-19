@@ -6,6 +6,11 @@
     perspective-origin: center -120%;
     perspective: 750px;
     transform: scale(0.65);
+    /*display: flex;
+    flex-direction: column;
+    grid-column: auto;
+    align-items: center;
+    border-style: groove;*/
 }
 
 .cube {
@@ -16,7 +21,17 @@
     transform: translateZ(-150px);
     animation-duration: 3000ms;
     animation-iteration-count: infinite;
-
+    /*
+     width: 50vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: row-reverse;*/
+    /* animation: rotar 3s infinite both;
+    animation-name: giro;
+    transform: perspective(50px) ;
+      background-color: grey;
+      border: 1px solid #000;
+    perspective: 600px;*/
 }
 
 

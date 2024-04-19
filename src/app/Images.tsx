@@ -1,13 +1,11 @@
 import styles from "./pages/home/Home.module.css";
 
- export const Images =
-    [
-
-        {
-            id: 1,
-            src: `require("../../public/image/boba_fett.png")`,
-            f: styles.front
-        },
+export const Images =
+    [{
+        id: 1,
+        src: `require("../../public/image/boba_fett.png")`,
+        f: styles.front
+    },
         {
             id: 2,
             src: `require("../../public/image/clone4.png")`,
@@ -23,4 +21,6 @@ import styles from "./pages/home/Home.module.css";
             src: `require("../../public/image/r2_d2.png")`,
             f: styles.right
         }
+
+
     ]

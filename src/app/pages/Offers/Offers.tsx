@@ -16,8 +16,7 @@ import {Images} from "../../Images";
 
 export const Offers = () => {
 
-
-
+    
     const appsData = {
         slides: [
             {
@@ -56,6 +55,7 @@ export const Offers = () => {
         setSlide(slide === Images.length - 1 ? 0 : slide + 1);
     };
 
+    console.log(Images.at(3));
 
     return (
         <div>
@@ -65,7 +65,7 @@ export const Offers = () => {
                 borderRadius: "10px",
                 background: "greenyellow"
             }}>
-                <Cube3d/>
+
             </center>
 
             <ArrowCircleLeft onClick={prevSlide} className={styles.rotateButton}/>
