@@ -122,6 +122,8 @@ export const Cube3d =() => {
                            <img
                                 src={item.src}
                                 key={item.id}
+                               /*  className={item.id === slide ?   faces[0]  : faces[1]
+                                      ? item.id === slide + 1 ? faces[2] : faces[3] : faces[1] }*/
                                className={item.f}
                                 style={{borderRadius: 5}}
                                 width={200} height={150}

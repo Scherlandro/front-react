@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {useForm} from "react-hook-form"
 import {
+    Alert,
     Card,
     Drawer,
     Fab,
@@ -59,6 +60,23 @@ export const Dashboard = () => {
         event.preventDefault();
     }
 
+    const [fontFamily, setFontFamily] = useState('');
+
+    useEffect(() => {
+        let newFont;
+        switch (fontFamily) {
+            case 'Inter':
+                newFont = `'Inter', sans-serif`;
+                break;
+            case 'Poppins':
+                newFont = `'Poppins', sans-serif`;
+                break;
+            case 'Roboto':
+            default:
+                newFont = `'Roboto', sans-serif`;
+                break;
+        }
+    },);
 
 
     useEffect(() => {
@@ -264,7 +282,11 @@ export const Dashboard = () => {
                     style={{background: 'silver', height:600 }}
                    onSubmit={handleSubmit(onSubmit)}>
                     <Grid  sx={{ p: 6 }} >
-
+                 {/*       <label>
+                             <input type="text" {...register("address")} onBlur={checkAddress} />
+                            <button onClick={checkAddress}></button>
+                            <select {...register("municipio")}></select>
+                        </label>*/}
                         <label>
                             CEP:
                             <input type="text" {...register("cep")}
@@ -307,6 +329,72 @@ export const Dashboard = () => {
                         <button type="submit" >Enviar</button>
                     </Grid>
                 </form>
+
+
+                <div>
+                    <Grid sx={{p: 3}}>
+                        Seletor de fontes
+                        <RadioGroup
+                            aria-label="font-family"
+                            onChange={(e) => setFontFamily(e.target.value)}
+                            name="row-radio-buttons-group"
+                        >
+                            <Alert severity="success">Fonte selecionada {fontFamily}</Alert>
+                            <FormControlLabel
+                                value="Roboto"
+                                control={<Radio />}
+                                label="Roboto"
+                                sx={{
+                                    '& .MuiSvgIcon-root': {fontSize: 28},
+                                    '& .MuiFormControlLabel-label': {color: theme.palette.grey[900]}
+                                }}
+                            />
+                            <FormControlLabel
+                                value="Poppins"
+                                control={<Radio/>}
+                                label="Poppins"
+                                sx={{
+                                    '& .MuiSvgIcon-root': {fontSize: 28},
+                                    '& .MuiFormControlLabel-label': {color: theme.palette.grey[900]}
+                                }}
+                            />
+
+                        </RadioGroup>
+
+                        <Grid item xs={12} container spacing={2} alignItems="center" sx={{mt: 2.5}}>
+                            <Grid item>
+                                <Typography variant="h6" color="secondary">
+                                    4px
+                                </Typography>
+                            </Grid>
+                            <Grid item xs>
+                                <Slider
+                                    size="small"
+                                    valueLabelDisplay="on"
+                                    aria-labelledby="discrete-slider-small-steps"
+                                    marks
+                                    step={2}
+                                    min={4}
+                                    max={24}
+                                    color="secondary"
+                                    sx={{
+                                        '& .MuiSlider-valueLabel': {
+                                            color: 'secondary.light'
+                                        }
+                                    }}
+                                />
+                            </Grid>
+                            <Grid item>
+                                <Typography variant="h6" color="secondary">
+                                    24px
+                                </Typography>
+                            </Grid>
+                        </Grid>
+
+                    </Grid>
+                </div>
+
+
 
             </Drawer>
 

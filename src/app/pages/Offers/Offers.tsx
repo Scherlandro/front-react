@@ -16,7 +16,8 @@ import {Images} from "../../Images";
 
 export const Offers = () => {
 
-    
+    const faces = {0: styles.right, 1: styles.back, 2: styles.left, 3: styles.front};
+
     const appsData = {
         slides: [
             {
@@ -65,7 +66,8 @@ export const Offers = () => {
                 borderRadius: "10px",
                 background: "greenyellow"
             }}>
-
+                {/* <Cube3d/> */}
+                <img src={Images.at(2)}/>
             </center>
 
             <ArrowCircleLeft onClick={prevSlide} className={styles.rotateButton}/>
@@ -86,16 +88,28 @@ export const Offers = () => {
                             }}
                         >
                             <CardContent className={styles.scene}>
-                                    <div className={styles.cube} style={{transform: `rotateY(${rotateY}deg)`}}>
-                                        <div className={styles.front}><img src={require("../image/clone4.png")}/></div>
-                                        <div className={styles.back}><img
-                                            src={require("../image/anakin_starfighter.png")}/></div>
-                                        <div className={styles.right}><img src={require("../image/boba_fett.png")}/>
-                                        </div>
-                                        <div className={styles.left}><img src={require("../image/xwing.png")}/></div>
-                                        <div className={styles.top}><img src={require("../image/r2_d2.png")}/></div>
-                                        <div className={styles.bottom}><img src={require("../image/clone4.png")}/></div>
-                                    </div>
+                                <div className={styles.cube} style={{transform: `rotateY(${rotateY}deg)`}}>
+                                    <div className={styles.front}><img src={Images.at(0)}/></div>
+                                    <div className={styles.back}><img src={Images.at(1)}/></div>
+                                    <div className={styles.right}><img src={Images.at(2)}/></div>
+                                    <div className={styles.left}><img src={Images.at(3)}/></div>
+                                    <div className={styles.top}><img src={Images.at(4)}/></div>
+                                    <div className={styles.bottom}><img src={Images.at(5)}/></div>
+                                    {appsData.slides.map((item, idx) => {
+                                        return (
+                                            <img
+                                                src={item.imageUrl}
+                                                alt={item.alt}
+                                                key={idx}
+                                                className={idx === slide ? item.f[0] : item.f[1]
+                                                    ? idx === slide + 1 ? item.f[2] : item.f[3] : item.f[1]}
+                                                style={{borderRadius: 5}}
+                                                width={200} height={150}
+                                            />
+                                        )
+                                    })
+                                    }
+                                </div>
                             </CardContent>
                         </Card>
 

@@ -123,8 +123,6 @@ export const MenuMain: React.FC<any> = () => {
         {name: "HOME", link: "/"},
         {name: "Dash", link: "/dashbord"},
         {name: "Offers", link: "/offers"},
-        {name: "PROJECTS", link: "/projects"},
-        {name: "Dash 0", link: "/dashbord0"},
         {name: "Login", link: "/entrar"},
     ];
 
