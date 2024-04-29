@@ -46,8 +46,7 @@ export const Home = () => {
                                             <div className={styles.cube} style={{transform: `rotateY(${rotateY}deg)`}}>
                                                 <div className={styles.top}/>
                                                 <img src={idx.length ? idx : ''}
-                                                     className={faces.length === 4 ? faces.at(n) : ''}/>
-                                                {/*<div className={styles.bottom}></div>*/}
+                                                     className={faces.length === 4 ? faces.at(n) : ''}/>                                               
                                             </div>
                                             <br/> <br/>
                                             <div className={styles.arrows}>
