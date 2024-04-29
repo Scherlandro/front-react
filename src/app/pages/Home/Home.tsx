@@ -31,10 +31,7 @@ export const Home = () => {
             <h4>
                 <a target="_blank" href="https://www.youtube.com/@scherlandroaraujo8273">Scherlandro</a>
             </h4>
-            <center style={{
-                borderRadius: "10px",
-                background: "greenyellow"
-            }}>
+            <center className={styles.cTop3d} >
                 <Cube3d/>
             </center>
 
@@ -43,13 +40,14 @@ export const Home = () => {
                     <Grid item xs={6} sm={6} md={6} lg={6} key={index}  className={styles.centerTag}>
 
                                 {Images.map((idx, n) => {
-
+                                    console.log('Faces', faces.length, idx.length);
                                     return (
                                         <div className={styles.container}>
                                             <div className={styles.cube} style={{transform: `rotateY(${rotateY}deg)`}}>
                                                 <div className={styles.top}/>
-                                                <img src={idx} className={faces.at(n)}/>
-                                                <div className={styles.bottom}></div>
+                                                <img src={idx.length ? idx : ''}
+                                                     className={faces.length === 4 ? faces.at(n) : ''}/>
+                                                {/*<div className={styles.bottom}></div>*/}
                                             </div>
                                             <br/> <br/>
                                             <div className={styles.arrows}>

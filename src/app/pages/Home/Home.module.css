@@ -30,6 +30,10 @@
     width: auto;
     margin: 10px;
 }
+.cTop3d {
+    background: hsla(120, 67%, 89%, 0.7);
+    border-radius: 10px;
+}
 
 .cube {
     width: 200px;
