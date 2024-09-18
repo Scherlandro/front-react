@@ -1,18 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import {useForm} from "react-hook-form"
-import {
-    Alert,
-    Card,
-    Drawer,
-    Fab,
-    FormControl,
-    FormControlLabel,
-    Grid,
-    Radio,
-    RadioGroup, Slider,
-    Tooltip,
-    Typography
-} from "@mui/material";
+import { Alert,Card,Drawer, Fab, FormControl, FormControlLabel, Grid,
+    Radio, RadioGroup, Slider, Tooltip, Typography } from "@mui/material";
 import {MenuMain} from "../menu/Menu";
 import {useTheme} from "@mui/material/styles";
 import {DialogConfirmGenerico} from "../../shared/components/dialogGenerico";
@@ -282,11 +271,11 @@ export const Dashboard = () => {
                     style={{background: 'silver', height:600 }}
                    onSubmit={handleSubmit(onSubmit)}>
                     <Grid  sx={{ p: 6 }} >
-                 {/*       <label>
-                             <input type="text" {...register("address")} onBlur={checkAddress} />
+                 {/* <label>
+                         <input type="text" {...register("address")} onBlur={checkAddress} />
                             <button onClick={checkAddress}></button>
                             <select {...register("municipio")}></select>
-                        </label>*/}
+                     </label>*/}
                         <label>
                             CEP:
                             <input type="text" {...register("cep")}
@@ -394,10 +383,7 @@ export const Dashboard = () => {
                     </Grid>
                 </div>
 
-
-
             </Drawer>
-
 
         </div>
     );

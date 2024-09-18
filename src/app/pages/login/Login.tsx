@@ -21,17 +21,11 @@ export const Login = () => {
         formState: { errors },
     } = useForm<Inputs>()
     const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data)
-
     console.log(watch("example"));
-
-
     const inputPasswordRef = useRef<HTMLInputElement>(null);
-
     const {nomeDoUsuario} = useUsuarioLogado();
-
     const [password, setPassword] = useState('');
     const [email, setEmail] = useState('');
-
     const emailLength = useMemo(() => {
         return email.length * 1;
     }, [email.length]);
@@ -49,8 +43,7 @@ export const Login = () => {
         <div>
             <MenuMain/>
             <form className={styles.componentGradient}
-                   onSubmit={handleSubmit(onSubmit)}
-            >
+                   onSubmit={handleSubmit(onSubmit)}        >
 
                 <p >{nomeDoUsuario}</p>
                 <div className={styles.containerLogin}>
@@ -66,7 +59,6 @@ export const Login = () => {
                             />
                         </div>
                     </div>
-
 
                     <div className="mb-3 row">
                         <label htmlFor="inputPassword" className="col-sm-2 col-form-label">Password</label>
@@ -87,12 +79,6 @@ export const Login = () => {
 
                 </div>
 
-                <div>
-                    <label>Validar email</label>
-                    <input defaultValue="test" {...register("example")} />
-                    <label>Validar senha</label>
-                    <input {...register("exampleRequired", { required: true })}/>
-                </div>
 
             </form>
 
